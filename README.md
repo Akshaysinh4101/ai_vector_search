@@ -39,3 +39,6 @@ storage/app/files/categories.xlsx
 
 ### 6. Run Import Command
 php artisan import:categories categories.xlsx
+
+### 7.  Start the Server
+php artisan serve

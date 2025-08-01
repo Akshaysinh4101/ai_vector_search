@@ -93,7 +93,7 @@
 
     <script>
         $(document).ready(function () {
-            
+
             $('#searchInput').on('input', function () {
                 $('#searchBtn').prop('disabled', $(this).val().trim() === '');
             });
@@ -117,7 +117,7 @@
                         if (response.success) {
                             $('#searchResults').html(response.content);
                         } else {
-                            $('#searchResults').html('<div class="alert alert-warning">No results found.</div>');
+                            $('#searchResults').html(`<div class="alert alert-warning">${response.message}</div>`);
                         }
                     },
                     error: function () {

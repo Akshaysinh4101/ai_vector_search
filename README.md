@@ -30,15 +30,19 @@ DB_PASSWORD=your_password
 ### 4. Run Migrations
 php artisan migrate
 
+### 5. Create Upload Directory
+Before running the import, manually create the following folder:
+--> storage/app/files/
+Then, upload the `categories.xlsx` file inside that folder.
 
-### 5. Import Categories from Excel
+### 6. Import Categories from Excel
 
 Excel file is located in:
 storage/app/files/categories.xlsx
 
 
-### 6. Run Import Command
-php artisan import:categories categories.xlsx
+### 7. Run Import Command
+php artisan import:categories
 
-### 7.  Start the Server
+### 8. Start the Server
 php artisan serve

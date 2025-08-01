@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('web.index');
 });
+
+Route::get('/search', [SearchController::class, 'search'])->name('vector.search');
+
